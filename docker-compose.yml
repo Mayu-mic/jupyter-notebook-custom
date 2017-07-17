@@ -1,0 +1,12 @@
+version: "3.0"
+
+services:
+  notebook:
+    build:
+      context: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebook:/notebook
+    environment:
+      - GRANT_SUDO=yes
